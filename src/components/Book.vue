@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
-import { shortenDomain, openPage } from "../assets/data";
+import { shortenDomain, openPage } from "../utils/data";
 import { Popover, Icon } from "vant";
 
 const props = defineProps({
