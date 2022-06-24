@@ -5,11 +5,11 @@ const $axios = axios.create({
   baseURL: '/api'
 })
 
-export function getMangas(){
+export function getMangas() {
   return $axios({
     method: 'get',
     url: 'https://my-manga-server.vercel.app/api'
-  })
+  }).then(res => res.data.data)
 }
 
 export default $axios

@@ -18,5 +18,10 @@
 		"unplugin-vue-components": "^0.19.6",
 		"vant": "^3.5.1",
 		"vite": "^2.9.9"
-	}
+	},
+  "eslintConfig": {
+    "rules": {
+      "vue/no-v-model-argument": 0
+    }
+  }
 }
