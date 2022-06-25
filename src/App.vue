@@ -15,6 +15,8 @@ const pageItemNum = 10;
 const startIndex = computed(() => pageItemNum * (currentPage.value - 1));
 const endIndex = computed(() => pageItemNum * currentPage.value);
 const list = computed(() => mangas.value.slice(startIndex.value, endIndex.value));
+const pagiantionSize = window.screen.width <= 400 ? 5 : 20
+
 
 </script>
 
@@ -26,7 +28,7 @@ const list = computed(() => mangas.value.slice(startIndex.value, endIndex.value)
         v-model="currentPage"
         :total-items="mangas.length"
         :items-per-page="pageItemNum"
-        show-page-size="20"
+        :show-page-size="pagiantionSize"
       />
     </template>
   </layout>

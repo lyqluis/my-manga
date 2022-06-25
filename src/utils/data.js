@@ -17,3 +17,5 @@ export function openPage(source) {
   }
   window.open(res)
 }
+
+// todo 适配移动端

@@ -7,8 +7,7 @@
       <slot name="header"></slot>
     </div>
     <div class="center">
-      <slot>
-      </slot>
+      <slot> </slot>
     </div>
     <div class="footer">
       <slot name="footer">footer</slot>
@@ -30,10 +29,12 @@
     display: flex;
     justify-content: flex-start;
     // flex-flow: row wrap;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
+    @media only screen and (max-width: 400px) {
+      width: 100%;
+    }
   }
   .footer {
-    // height: 50px;
     width: 100%;
   }
 }

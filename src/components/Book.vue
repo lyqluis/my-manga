@@ -12,6 +12,8 @@ const source = computed(() => props.book.sources[0]);
 
 // popover
 const showPopover = ref(false);
+
+const placement = window.screen.width <= 400 ? "bottom" : "right";
 </script>
 
 <template>
@@ -20,7 +22,7 @@ const showPopover = ref(false);
       <div class="img">
         <img :src="book.sources[0].img" alt="" />
       </div>
-      <van-popover placement="right" v-model:show="showPopover">
+      <van-popover :placement="placement" v-model:show="showPopover">
         <template #reference>
           <van-icon name="wap-nav" />
         </template>
@@ -85,6 +87,19 @@ const showPopover = ref(false);
       &:first-child {
         font-size: 16px;
         margin: 10px 0;
+      }
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    width: 170px;
+    height: 250px;
+    margin: 8.75px;
+    margin-bottom: 50px;
+    padding-left: 5px;
+    &_header {
+      .img {
+        width: 105px;
+        height: 140px;
       }
     }
   }
