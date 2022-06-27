@@ -16,7 +16,9 @@ const startIndex = computed(() => pageItemNum * (currentPage.value - 1));
 const endIndex = computed(() => pageItemNum * currentPage.value);
 const list = computed(() => mangas.value.slice(startIndex.value, endIndex.value));
 const pagiantionSize = window.screen.width <= 400 ? 5 : 20
-
+const handlePageChange = e => {
+  window.scrollTo(0,0)
+}
 
 </script>
 
@@ -29,6 +31,7 @@ const pagiantionSize = window.screen.width <= 400 ? 5 : 20
         :total-items="mangas.length"
         :items-per-page="pageItemNum"
         :show-page-size="pagiantionSize"
+        @change="handlePageChange"
       />
     </template>
   </layout>

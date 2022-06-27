@@ -19,7 +19,7 @@ const placement = window.screen.width <= 400 ? "bottom" : "right";
 <template>
   <div class="book" @mouseover="show">
     <div class="book_header">
-      <div class="img">
+      <div class="img" @click="openPage(source)">
         <img :src="book.sources[0].img" alt="" />
       </div>
       <van-popover :placement="placement" v-model:show="showPopover">
@@ -33,7 +33,7 @@ const placement = window.screen.width <= 400 ? "bottom" : "right";
         </template>
       </van-popover>
     </div>
-    <div class="book_detail" @click="openPage(source)">
+    <div class="book_detail">
       <p>
         {{ book.name }}
       </p>
