@@ -2,13 +2,13 @@ import axios from 'axios'
 
 const $axios = axios.create({
   timeout: 60 * 1000,
-  baseURL: '/api'
+  baseURL: 'https://manga.thisisluis.top'
 })
 
 export function getMangas() {
   return $axios({
     method: 'get',
-    url: 'https://my-manga-server.vercel.app/api'
+    url: '/api'
   }).then(res => res.data.data)
 }
 
