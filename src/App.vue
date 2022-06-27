@@ -38,12 +38,4 @@ const handlePageChange = e => {
 </template>
 
 <style lang="scss">
-:root {
-  --font-size-detail: 14px;
-  --color-font: #515151;
-  --color-detail: 14px;
-}
-html {
-  background: #fff;
-}
 </style>

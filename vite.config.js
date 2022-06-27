@@ -17,7 +17,7 @@ export default defineConfig({
     /* CSS 预处理器 */
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "src/assets/scss/reset.scss";'
+        // additionalData: `@import "src/assets/scss/reset.scss";@import "src/assets/scss/base.scss";`
       }
     }
   }
