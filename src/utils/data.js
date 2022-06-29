@@ -7,6 +7,7 @@ export function shortenDomain(domain) {
   return domain
 }
 
+// todo 区分打开pc版 / 移动版网页
 export function openPage(source) {
   const { domain, url } = source
   let res

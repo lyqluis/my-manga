@@ -26,12 +26,26 @@
   .center {
     width: 80%;
     margin: auto;
-    display: flex;
-    justify-content: flex-start;
-    // flex-flow: row wrap;
-    flex-wrap: wrap;
-    @media only screen and (max-width: 400px) {
-      width: 100%;
+    
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(5, 20%);
+    grid-gap: 10px;
+    justify-items: center;
+    @media only screen and (max-width: 1024px) {
+      width: 90%;
+      grid-template-columns: repeat(4, 25%);
+      @media only screen and (max-width: 800px) {
+        width: 95%;
+        grid-template-columns: repeat(3, 33.3%);
+        @media only screen and (max-width: 500px) {
+          width: 100%;
+          grid-template-columns: repeat(2, 50%);
+          @media only screen and (max-width: 300px) {
+            grid-template-columns: repeat(1, 100%);
+          }
+        }
+      }
     }
   }
   .footer {

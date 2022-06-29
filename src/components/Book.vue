@@ -90,7 +90,8 @@ const placement = window.screen.width <= 400 ? "bottom" : "right";
       }
     }
   }
-  @media only screen and (max-width: 400px) {
+  // iphone
+  @media only screen and (max-width: 500px) {
     width: 170px;
     height: 250px;
     margin: 8.75px;
