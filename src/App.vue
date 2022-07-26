@@ -4,7 +4,7 @@ import Layout from "./views/Layout.vue";
 import Book from "./components/Book.vue";
 import Pagination from "vant";
 import { getMangas } from "./utils/axios";
-import { handlePageInfo } from "./utils/mobile";
+import { handlePageInfo } from "./utils/device";
 
 const pageInfo = handlePageInfo();
 const { paginationSize, cols, rows } = pageInfo;
