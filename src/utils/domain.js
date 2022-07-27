@@ -11,16 +11,19 @@ const DOMAIN_MOBILE_PAGES = {
 }
 
 const URL_REG = /http/
-const DMZJ_REG = /(?<=\/)([\w\s]+)$/
+// safari 不支持正则断言
+// https://blog.csdn.net/wts563540/article/details/123225559
+// const DMZJ_REG = /(?<=\/)([\w\s]+)$/
+const DMZJ_REG = /\/([\w\s]+)$/
 
 import { isMobile } from './device'
 
-// todo 区分打开pc版 / 移动版网页
 export function openPage(source) {
   const { domain, url } = source
   let res
   if (URL_REG.test(url)) {  // dmzj
     const html = url.match(DMZJ_REG)[1].trim()
+    console.log(url.match(DMZJ_REG))
     res = isMobile() ? DOMAIN_MOBILE_PAGES[domain].mobile + html + '.html' : url
   } else {  // manhuagui
     res = domain.replace(/\/$/, '') + url.replace(/^[\/]|/, '/')
